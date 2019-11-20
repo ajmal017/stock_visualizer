@@ -42,8 +42,7 @@ def update_graph_output(n_clicks, ticker, country):
     df_daily = dh.get_daily_stock_data(ticker, country)
     df_date =df_daily['date']
     df_closing = df_daily['close']
-    print(df_date.size)
-    print(df_closing)
+
     trace1 = go.Scatter(y=df_closing, x=df_date, mode='lines', name="AAPL", marker={"size": 3})
     return {"data": [trace1],
              "layout": go.Layout(title="Wage Rigidity",
